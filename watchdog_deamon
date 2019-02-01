@@ -1,0 +1,18 @@
+watdog : 
+	part 1 :  hardware timer , kernel driver  >> force rest
+	part 2 : background deamon  >>set ,refreshes time out , control watchdog river  
+	over device file : /dev/watchdog  
+
+general test : 
+	resource available : memory , load averages  
+        cpu load averages 	
+	external test program/ script 
+	
+
+// 2 deamons duoc su dung support watchdog
+	wd_keepalive ( open , refresh , close) 
+	watchdog     ( open , refresh , close ) action on device file 
+	chi refresh watchdog when all test passed  
+
+	deamon duoc stop watchdog khi gui sigterm( 15) 
+	neu gui sigint (2 ) sigkill(9) >> watchdog van hoat dong >> reboot khi khong pass test 

@@ -1,0 +1,1 @@
+cmd_/home/debian/watchdog_summary/test/hello-2.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/watchdog_summary/test/hello-2.ko /home/debian/watchdog_summary/test/hello-2.o /home/debian/watchdog_summary/test/hello-2.mod.o ;  true
