@@ -45,7 +45,7 @@ static dev_t first;
 static struct cdev *c_dev;
 static struct class *cl;
 
-#define PTV			0	/* prescale */
+#define PTV			1	/* prescale */
 #define GET_WLDR_VAL(secs)	(0xffffffff - ((secs) * (32768/(1<<PTV))) + 1)
 
 
