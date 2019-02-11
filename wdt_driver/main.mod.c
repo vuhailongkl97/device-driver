@@ -15,21 +15,21 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 	.arch = MODULE_ARCH_INIT,
 };
 
-#ifdef RETPOLINE
+#ifdef CONFIG_RETPOLINE
 MODULE_INFO(retpoline, "Y");
 #endif
 
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x7ef3190f, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x9f7a3e33, __VMLINUX_SYMBOL_STR(cdev_del) },
-	{ 0x91bda9a9, __VMLINUX_SYMBOL_STR(device_destroy) },
-	{ 0x4b1552f8, __VMLINUX_SYMBOL_STR(cdev_add) },
-	{ 0x217421db, __VMLINUX_SYMBOL_STR(cdev_init) },
-	{ 0x6bebf1c2, __VMLINUX_SYMBOL_STR(cdev_alloc) },
+	{ 0x977e40b4, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0x7bded033, __VMLINUX_SYMBOL_STR(cdev_del) },
+	{ 0x65d5bf5b, __VMLINUX_SYMBOL_STR(device_destroy) },
+	{ 0x53dc68, __VMLINUX_SYMBOL_STR(cdev_add) },
+	{ 0xaf250583, __VMLINUX_SYMBOL_STR(cdev_init) },
+	{ 0x88c259e1, __VMLINUX_SYMBOL_STR(cdev_alloc) },
 	{ 0x9491b702, __VMLINUX_SYMBOL_STR(class_destroy) },
-	{ 0xb7f96077, __VMLINUX_SYMBOL_STR(device_create) },
+	{ 0xca72bedc, __VMLINUX_SYMBOL_STR(device_create) },
 	{ 0x7485e15e, __VMLINUX_SYMBOL_STR(unregister_chrdev_region) },
 	{ 0x339b7a65, __VMLINUX_SYMBOL_STR(__class_create) },
 	{ 0x29537c9e, __VMLINUX_SYMBOL_STR(alloc_chrdev_region) },

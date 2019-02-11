@@ -1,0 +1,1 @@
+cmd_/home/debian/watchdog_summary/button_interrupt/button_irq.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/watchdog_summary/button_interrupt/button_irq.ko /home/debian/watchdog_summary/button_interrupt/button_irq.o /home/debian/watchdog_summary/button_interrupt/button_irq.mod.o ;  true
