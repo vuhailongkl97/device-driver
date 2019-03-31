@@ -23,15 +23,13 @@ static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
 	{ 0x977e40b4, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0xc1514a3b, __VMLINUX_SYMBOL_STR(free_irq) },
-	{ 0xd6b8e852, __VMLINUX_SYMBOL_STR(request_threaded_irq) },
-	{ 0x602fbc24, __VMLINUX_SYMBOL_STR(irq_of_parse_and_map) },
-	{ 0x5e623443, __VMLINUX_SYMBOL_STR(of_find_node_by_phandle) },
+	{ 0xd643f348, __VMLINUX_SYMBOL_STR(unregister_netdev) },
+	{ 0xb1fa6736, __VMLINUX_SYMBOL_STR(register_netdev) },
+	{ 0xde224fc1, __VMLINUX_SYMBOL_STR(alloc_netdev_mqs) },
+	{ 0xb9b19d34, __VMLINUX_SYMBOL_STR(skb_tstamp_tx) },
+	{ 0xceb3813c, __VMLINUX_SYMBOL_STR(eth_type_trans) },
 	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
-	{ 0xedc03953, __VMLINUX_SYMBOL_STR(iounmap) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
-	{ 0x822137e2, __VMLINUX_SYMBOL_STR(arm_heavy_mb) },
-	{ 0x79c5a9f0, __VMLINUX_SYMBOL_STR(ioremap) },
 	{ 0xb1ad28e0, __VMLINUX_SYMBOL_STR(__gnu_mcount_nc) },
 };
 

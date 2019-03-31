@@ -1,8 +1,8 @@
-cmd_/home/debian/driver/button_interrupt/button_irq.o := gcc -Wp,-MD,/home/debian/driver/button_interrupt/.button_irq.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/6/include -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"button_irq"'  -DKBUILD_MODNAME='"button_irq"' -c -o /home/debian/driver/button_interrupt/.tmp_button_irq.o /home/debian/driver/button_interrupt/button_irq.c
+cmd_/home/debian/driver/basic_loop_back_drv/main.o := gcc -Wp,-MD,/home/debian/driver/basic_loop_back_drv/.main.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/6/include -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"main"'  -DKBUILD_MODNAME='"main"' -c -o /home/debian/driver/basic_loop_back_drv/.tmp_main.o /home/debian/driver/basic_loop_back_drv/main.c
 
-source_/home/debian/driver/button_interrupt/button_irq.o := /home/debian/driver/button_interrupt/button_irq.c
+source_/home/debian/driver/basic_loop_back_drv/main.o := /home/debian/driver/basic_loop_back_drv/main.c
 
-deps_/home/debian/driver/button_interrupt/button_irq.o := \
+deps_/home/debian/driver/basic_loop_back_drv/main.o := \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
     $(wildcard include/config/enable/must/check.h) \
@@ -467,6 +467,179 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
+  include/linux/netdevice.h \
+    $(wildcard include/config/dcb.h) \
+    $(wildcard include/config/hyperv/net.h) \
+    $(wildcard include/config/wlan.h) \
+    $(wildcard include/config/ax25.h) \
+    $(wildcard include/config/mac80211/mesh.h) \
+    $(wildcard include/config/net/ipip.h) \
+    $(wildcard include/config/net/ipgre.h) \
+    $(wildcard include/config/ipv6/sit.h) \
+    $(wildcard include/config/ipv6/tunnel.h) \
+    $(wildcard include/config/rps.h) \
+    $(wildcard include/config/netpoll.h) \
+    $(wildcard include/config/xps.h) \
+    $(wildcard include/config/bql.h) \
+    $(wildcard include/config/rfs/accel.h) \
+    $(wildcard include/config/fcoe.h) \
+    $(wildcard include/config/xfrm/offload.h) \
+    $(wildcard include/config/net/poll/controller.h) \
+    $(wildcard include/config/libfcoe.h) \
+    $(wildcard include/config/wireless/ext.h) \
+    $(wildcard include/config/net/switchdev.h) \
+    $(wildcard include/config/net/l3/master/dev.h) \
+    $(wildcard include/config/ipv6.h) \
+    $(wildcard include/config/xfrm.h) \
+    $(wildcard include/config/vlan/8021q.h) \
+    $(wildcard include/config/net/dsa.h) \
+    $(wildcard include/config/tipc.h) \
+    $(wildcard include/config/mpls/routing.h) \
+    $(wildcard include/config/net/cls/act.h) \
+    $(wildcard include/config/netfilter/ingress.h) \
+    $(wildcard include/config/net/sched.h) \
+    $(wildcard include/config/garp.h) \
+    $(wildcard include/config/mrp.h) \
+    $(wildcard include/config/cgroup/net/prio.h) \
+    $(wildcard include/config/net/flow/limit.h) \
+    $(wildcard include/config/proc/fs.h) \
+  include/linux/delay.h \
+  arch/arm/include/asm/delay.h \
+  include/linux/rculist.h \
+  include/linux/dynamic_queue_limits.h \
+  include/linux/ethtool.h \
+  include/linux/compat.h \
+    $(wildcard include/config/compat/old/sigaction.h) \
+    $(wildcard include/config/odd/rt/sigaction.h) \
+  include/uapi/linux/ethtool.h \
+  include/linux/if_ether.h \
+  include/linux/skbuff.h \
+    $(wildcard include/config/nf/conntrack.h) \
+    $(wildcard include/config/bridge/netfilter.h) \
+    $(wildcard include/config/ipv6/ndisc/nodetype.h) \
+    $(wildcard include/config/net/rx/busy/poll.h) \
+    $(wildcard include/config/network/secmark.h) \
+    $(wildcard include/config/network/phy/timestamping.h) \
+    $(wildcard include/config/netfilter/xt/target/trace.h) \
+    $(wildcard include/config/nf/tables.h) \
+    $(wildcard include/config/ip/vs.h) \
+  include/linux/socket.h \
+  arch/arm/include/generated/uapi/asm/socket.h \
+  include/uapi/asm-generic/socket.h \
+  arch/arm/include/generated/uapi/asm/sockios.h \
+  include/uapi/asm-generic/sockios.h \
+  include/uapi/linux/sockios.h \
+  include/linux/uio.h \
+    $(wildcard include/config/arch/has/uaccess/flushcache.h) \
+  include/uapi/linux/uio.h \
+  include/uapi/linux/socket.h \
+  include/linux/net.h \
+  include/linux/random.h \
+    $(wildcard include/config/gcc/plugin/latent/entropy.h) \
+    $(wildcard include/config/arch/random.h) \
+  include/linux/once.h \
+  include/uapi/linux/random.h \
+  include/uapi/linux/ioctl.h \
+  arch/arm/include/generated/uapi/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/uapi/asm-generic/ioctl.h \
+  include/linux/irqnr.h \
+  include/uapi/linux/irqnr.h \
+  include/linux/fcntl.h \
+  include/uapi/linux/fcntl.h \
+  arch/arm/include/uapi/asm/fcntl.h \
+  include/uapi/asm-generic/fcntl.h \
+  include/linux/fs.h \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/cgroup/writeback.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/fs/encryption.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/fs/dax.h) \
+    $(wildcard include/config/mandatory/file/locking.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/migration.h) \
+  include/linux/wait_bit.h \
+  include/linux/kdev_t.h \
+  include/uapi/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  include/linux/stringhash.h \
+    $(wildcard include/config/dcache/word/access.h) \
+  include/linux/hash.h \
+    $(wildcard include/config/have/arch/hash.h) \
+  include/linux/path.h \
+  include/linux/list_lru.h \
+    $(wildcard include/config/slob.h) \
+  include/linux/shrinker.h \
+  include/linux/pid.h \
+  include/linux/mm_types.h \
+    $(wildcard include/config/have/cmpxchg/double.h) \
+    $(wildcard include/config/have/aligned/struct/page.h) \
+    $(wildcard include/config/userfaultfd.h) \
+    $(wildcard include/config/have/arch/compat/mmap/bases.h) \
+    $(wildcard include/config/pgtable/levels.h) \
+    $(wildcard include/config/membarrier.h) \
+    $(wildcard include/config/aio.h) \
+    $(wildcard include/config/mmu/notifier.h) \
+    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
+    $(wildcard include/config/hmm.h) \
+  include/linux/mm_types_task.h \
+    $(wildcard include/config/split/ptlock/cpus.h) \
+    $(wildcard include/config/arch/enable/split/pmd/ptlock.h) \
+  include/linux/auxvec.h \
+  include/uapi/linux/auxvec.h \
+  include/linux/uprobes.h \
+    $(wildcard include/config/uprobes.h) \
+  arch/arm/include/asm/uprobes.h \
+  arch/arm/include/asm/probes.h \
+  arch/arm/include/asm/mmu.h \
+    $(wildcard include/config/cpu/has/asid.h) \
+  include/linux/capability.h \
+  include/uapi/linux/capability.h \
+  include/linux/semaphore.h \
+  include/uapi/linux/fiemap.h \
+  include/linux/migrate_mode.h \
+  include/linux/percpu-rwsem.h \
+  include/linux/rcuwait.h \
+  include/linux/rcu_sync.h \
+  include/linux/delayed_call.h \
+  include/linux/uuid.h \
+  include/uapi/linux/uuid.h \
+  include/linux/errseq.h \
+  include/uapi/linux/fs.h \
+  include/uapi/linux/limits.h \
+  include/linux/quota.h \
+    $(wildcard include/config/quota/netlink/interface.h) \
+  include/linux/percpu_counter.h \
+  include/uapi/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/projid.h \
+  include/uapi/linux/quota.h \
+  include/linux/nfs_fs_i.h \
+  include/uapi/linux/net.h \
+  include/linux/textsearch.h \
+  include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/vmalloc.h \
+  include/linux/kasan.h \
+  include/net/checksum.h \
   include/linux/uaccess.h \
   include/linux/sched.h \
     $(wildcard include/config/virt/cpu/accounting/native.h) \
@@ -476,7 +649,6 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/rt/group/sched.h) \
     $(wildcard include/config/cgroup/sched.h) \
     $(wildcard include/config/blk/dev/io/trace.h) \
-    $(wildcard include/config/slob.h) \
     $(wildcard include/config/compat/brk.h) \
     $(wildcard include/config/cgroups.h) \
     $(wildcard include/config/cc/stackprotector.h) \
@@ -488,7 +660,6 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/auditsyscall.h) \
     $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/ubsan.h) \
-    $(wildcard include/config/block.h) \
     $(wildcard include/config/task/xacct.h) \
     $(wildcard include/config/cpusets.h) \
     $(wildcard include/config/intel/rdt.h) \
@@ -499,13 +670,9 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/latencytop.h) \
     $(wildcard include/config/function/graph/tracer.h) \
     $(wildcard include/config/kcov.h) \
-    $(wildcard include/config/uprobes.h) \
     $(wildcard include/config/bcache.h) \
     $(wildcard include/config/vmap/stack.h) \
-    $(wildcard include/config/security.h) \
   include/uapi/linux/sched.h \
-  include/linux/pid.h \
-  include/linux/rculist.h \
   include/linux/sem.h \
   include/uapi/linux/sem.h \
   include/linux/ipc.h \
@@ -564,10 +731,6 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
   arch/arm/include/uapi/asm/sigcontext.h \
   arch/arm/include/generated/uapi/asm/siginfo.h \
   include/uapi/asm-generic/siginfo.h \
-  include/linux/mm_types_task.h \
-    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
-    $(wildcard include/config/split/ptlock/cpus.h) \
-    $(wildcard include/config/arch/enable/split/pmd/ptlock.h) \
   include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
   include/linux/kasan-checks.h \
@@ -580,77 +743,24 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/cpu/cp15/mmu.h) \
   arch/arm/include/generated/asm/extable.h \
   include/asm-generic/extable.h \
-  include/linux/interrupt.h \
-    $(wildcard include/config/irq/forced/threading.h) \
-    $(wildcard include/config/generic/irq/probe.h) \
-    $(wildcard include/config/proc/fs.h) \
-    $(wildcard include/config/irq/timings.h) \
-  include/linux/irqreturn.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/hardirq.h \
-  include/linux/ftrace_irq.h \
-    $(wildcard include/config/ftrace/nmi/enter.h) \
-    $(wildcard include/config/hwlat/tracer.h) \
-  include/linux/vtime.h \
-    $(wildcard include/config/virt/cpu/accounting.h) \
-    $(wildcard include/config/irq/time/accounting.h) \
-  include/linux/context_tracking_state.h \
-    $(wildcard include/config/context/tracking.h) \
-  include/linux/static_key.h \
-  arch/arm/include/asm/hardirq.h \
-  arch/arm/include/asm/irq.h \
-    $(wildcard include/config/sparse/irq.h) \
-    $(wildcard include/config/multi/irq/handler.h) \
-  include/linux/irq_cpustat.h \
-  arch/arm/include/asm/sections.h \
-  include/asm-generic/sections.h \
-  include/linux/gpio.h \
-    $(wildcard include/config/gpiolib.h) \
-    $(wildcard include/config/arch/have/custom/gpio/h.h) \
-  arch/arm/include/asm/gpio.h \
-    $(wildcard include/config/arch/nr/gpio.h) \
-  include/asm-generic/gpio.h \
-  include/linux/of.h \
-    $(wildcard include/config/sparc.h) \
-    $(wildcard include/config/of/dynamic.h) \
-    $(wildcard include/config/of.h) \
-    $(wildcard include/config/attach/node.h) \
-    $(wildcard include/config/detach/node.h) \
-    $(wildcard include/config/add/property.h) \
-    $(wildcard include/config/remove/property.h) \
-    $(wildcard include/config/update/property.h) \
-    $(wildcard include/config/of/numa.h) \
-    $(wildcard include/config/no/change.h) \
-    $(wildcard include/config/change/add.h) \
-    $(wildcard include/config/change/remove.h) \
-    $(wildcard include/config/of/resolve.h) \
-    $(wildcard include/config/of/overlay.h) \
-  include/linux/mod_devicetable.h \
-  include/linux/uuid.h \
-  include/uapi/linux/uuid.h \
-  include/linux/property.h \
-  include/linux/fwnode.h \
-  include/linux/slab.h \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
-    $(wildcard include/config/slab.h) \
-    $(wildcard include/config/slub.h) \
-  include/linux/kmemleak.h \
-    $(wildcard include/config/debug/kmemleak.h) \
-  include/linux/vmalloc.h \
-  include/linux/kasan.h \
-  include/linux/gpio/driver.h \
-    $(wildcard include/config/gpio/generic.h) \
-    $(wildcard include/config/gpiolib/irqchip.h) \
-    $(wildcard include/config/of/gpio.h) \
-    $(wildcard include/config/pinctrl.h) \
+  arch/arm/include/asm/checksum.h \
+  include/linux/in6.h \
+  include/uapi/linux/in6.h \
+  include/uapi/linux/libc-compat.h \
+    $(wildcard include/config/data.h) \
+  include/linux/dma-mapping.h \
+    $(wildcard include/config/have/generic/dma/coherent.h) \
+    $(wildcard include/config/has/dma.h) \
+    $(wildcard include/config/arch/has/dma/set/coherent/mask.h) \
+    $(wildcard include/config/need/dma/map/state.h) \
+    $(wildcard include/config/dma/api/debug.h) \
   include/linux/device.h \
     $(wildcard include/config/debug/devres.h) \
     $(wildcard include/config/generic/msi/irq/domain.h) \
+    $(wildcard include/config/pinctrl.h) \
     $(wildcard include/config/generic/msi/irq.h) \
     $(wildcard include/config/dma/cma.h) \
+    $(wildcard include/config/of.h) \
     $(wildcard include/config/devtmpfs.h) \
     $(wildcard include/config/sysfs/deprecated.h) \
   include/linux/ioport.h \
@@ -659,81 +769,6 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/pm.h) \
   include/linux/pinctrl/consumer.h \
   include/linux/seq_file.h \
-  include/linux/fs.h \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/cgroup/writeback.h) \
-    $(wildcard include/config/ima.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/fs/encryption.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/fs/dax.h) \
-    $(wildcard include/config/mandatory/file/locking.h) \
-    $(wildcard include/config/migration.h) \
-  include/linux/wait_bit.h \
-  include/linux/kdev_t.h \
-  include/uapi/linux/kdev_t.h \
-  include/linux/dcache.h \
-  include/linux/rculist_bl.h \
-  include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
-  include/linux/lockref.h \
-    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
-  include/linux/stringhash.h \
-    $(wildcard include/config/dcache/word/access.h) \
-  include/linux/hash.h \
-    $(wildcard include/config/have/arch/hash.h) \
-  include/linux/path.h \
-  include/linux/list_lru.h \
-  include/linux/shrinker.h \
-  include/linux/mm_types.h \
-    $(wildcard include/config/have/cmpxchg/double.h) \
-    $(wildcard include/config/have/aligned/struct/page.h) \
-    $(wildcard include/config/userfaultfd.h) \
-    $(wildcard include/config/have/arch/compat/mmap/bases.h) \
-    $(wildcard include/config/pgtable/levels.h) \
-    $(wildcard include/config/membarrier.h) \
-    $(wildcard include/config/aio.h) \
-    $(wildcard include/config/mmu/notifier.h) \
-    $(wildcard include/config/hmm.h) \
-  include/linux/auxvec.h \
-  include/uapi/linux/auxvec.h \
-  include/linux/uprobes.h \
-  arch/arm/include/asm/uprobes.h \
-  arch/arm/include/asm/probes.h \
-  arch/arm/include/asm/mmu.h \
-    $(wildcard include/config/cpu/has/asid.h) \
-  include/linux/capability.h \
-  include/uapi/linux/capability.h \
-  include/linux/semaphore.h \
-  include/linux/fcntl.h \
-  include/uapi/linux/fcntl.h \
-  arch/arm/include/uapi/asm/fcntl.h \
-  include/uapi/asm-generic/fcntl.h \
-  include/uapi/linux/fiemap.h \
-  include/linux/migrate_mode.h \
-  include/linux/percpu-rwsem.h \
-  include/linux/rcuwait.h \
-  include/linux/rcu_sync.h \
-  include/linux/delayed_call.h \
-  include/linux/errseq.h \
-  include/uapi/linux/fs.h \
-  include/uapi/linux/limits.h \
-  include/uapi/linux/ioctl.h \
-  arch/arm/include/generated/uapi/asm/ioctl.h \
-  include/asm-generic/ioctl.h \
-  include/uapi/asm-generic/ioctl.h \
-  include/linux/quota.h \
-    $(wildcard include/config/quota/netlink/interface.h) \
-  include/linux/percpu_counter.h \
-  include/uapi/linux/dqblk_xfs.h \
-  include/linux/dqblk_v1.h \
-  include/linux/dqblk_v2.h \
-  include/linux/dqblk_qtree.h \
-  include/linux/projid.h \
-  include/uapi/linux/quota.h \
-  include/linux/nfs_fs_i.h \
   include/linux/cred.h \
     $(wildcard include/config/debug/credentials.h) \
     $(wildcard include/config/keys.h) \
@@ -760,21 +795,110 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/xen.h) \
     $(wildcard include/config/arch/omap.h) \
   include/linux/pm_wakeup.h \
-  include/linux/irq.h \
-    $(wildcard include/config/generic/irq/effective/aff/mask.h) \
-    $(wildcard include/config/generic/irq/ipi.h) \
-    $(wildcard include/config/irq/domain/hierarchy.h) \
-    $(wildcard include/config/generic/irq/migration.h) \
-    $(wildcard include/config/generic/pending/irq.h) \
-    $(wildcard include/config/hardirqs/sw/resend.h) \
-    $(wildcard include/config/generic/irq/legacy/alloc/hwirq.h) \
-    $(wildcard include/config/generic/irq/legacy.h) \
-  include/linux/irqhandler.h \
-  include/linux/io.h \
+  include/linux/dma-debug.h \
+  include/linux/dma-direction.h \
+  include/linux/scatterlist.h \
+    $(wildcard include/config/debug/sg.h) \
+    $(wildcard include/config/need/sg/dma/length.h) \
+    $(wildcard include/config/arch/has/sg/chain.h) \
+    $(wildcard include/config/sg/pool.h) \
+  include/linux/mm.h \
+    $(wildcard include/config/have/arch/mmap/rnd/bits.h) \
+    $(wildcard include/config/have/arch/mmap/rnd/compat/bits.h) \
+    $(wildcard include/config/mem/soft/dirty.h) \
+    $(wildcard include/config/arch/uses/high/vma/flags.h) \
+    $(wildcard include/config/x86.h) \
+    $(wildcard include/config/x86/intel/memory/protection/keys.h) \
+    $(wildcard include/config/ppc.h) \
+    $(wildcard include/config/parisc.h) \
+    $(wildcard include/config/metag.h) \
+    $(wildcard include/config/x86/intel/mpx.h) \
+    $(wildcard include/config/stack/growsup.h) \
+    $(wildcard include/config/device/private.h) \
+    $(wildcard include/config/device/public.h) \
+    $(wildcard include/config/shmem.h) \
+    $(wildcard include/config/debug/vm/rb.h) \
+    $(wildcard include/config/page/poisoning.h) \
+    $(wildcard include/config/debug/pagealloc.h) \
+    $(wildcard include/config/hibernation.h) \
+    $(wildcard include/config/hugetlbfs.h) \
+  include/linux/range.h \
+  include/linux/percpu-refcount.h \
+  include/linux/page_ext.h \
+    $(wildcard include/config/idle/page/tracking.h) \
+  include/linux/stacktrace.h \
+    $(wildcard include/config/stacktrace.h) \
+    $(wildcard include/config/user/stacktrace/support.h) \
+  include/linux/stackdepot.h \
+  include/linux/page_ref.h \
+    $(wildcard include/config/debug/page/ref.h) \
+  include/linux/page-flags.h \
+    $(wildcard include/config/arch/uses/pg/uncached.h) \
+    $(wildcard include/config/memory/failure.h) \
+    $(wildcard include/config/swap.h) \
+    $(wildcard include/config/thp/swap.h) \
+    $(wildcard include/config/ksm.h) \
+  include/linux/tracepoint-defs.h \
+  include/linux/static_key.h \
+  include/linux/memremap.h \
+  arch/arm/include/asm/pgtable.h \
+    $(wildcard include/config/highpte.h) \
+  arch/arm/include/asm/proc-fns.h \
+  arch/arm/include/asm/glue-proc.h \
+    $(wildcard include/config/cpu/arm7tdmi.h) \
+    $(wildcard include/config/cpu/arm720t.h) \
+    $(wildcard include/config/cpu/arm740t.h) \
+    $(wildcard include/config/cpu/arm9tdmi.h) \
+    $(wildcard include/config/cpu/arm920t.h) \
+    $(wildcard include/config/cpu/arm922t.h) \
+    $(wildcard include/config/cpu/arm925t.h) \
+    $(wildcard include/config/cpu/arm926t.h) \
+    $(wildcard include/config/cpu/arm940t.h) \
+    $(wildcard include/config/cpu/arm946e.h) \
+    $(wildcard include/config/cpu/arm1020.h) \
+    $(wildcard include/config/cpu/arm1020e.h) \
+    $(wildcard include/config/cpu/arm1022.h) \
+    $(wildcard include/config/cpu/arm1026.h) \
+    $(wildcard include/config/cpu/mohawk.h) \
+    $(wildcard include/config/cpu/feroceon.h) \
+    $(wildcard include/config/cpu/v6k.h) \
+    $(wildcard include/config/cpu/pj4b.h) \
+    $(wildcard include/config/cpu/v7.h) \
+  include/asm-generic/pgtable-nopud.h \
+  include/asm-generic/pgtable-nop4d-hack.h \
+  include/asm-generic/5level-fixup.h \
+  arch/arm/include/asm/pgtable-hwdef.h \
+  arch/arm/include/asm/pgtable-2level-hwdef.h \
+  arch/arm/include/asm/tlbflush.h \
+    $(wildcard include/config/smp/on/up.h) \
+    $(wildcard include/config/cpu/tlb/v4wt.h) \
+    $(wildcard include/config/cpu/tlb/fa.h) \
+    $(wildcard include/config/cpu/tlb/v4wbi.h) \
+    $(wildcard include/config/cpu/tlb/feroceon.h) \
+    $(wildcard include/config/cpu/tlb/v4wb.h) \
+    $(wildcard include/config/cpu/tlb/v6.h) \
+    $(wildcard include/config/cpu/tlb/v7.h) \
+    $(wildcard include/config/arm/errata/720789.h) \
+    $(wildcard include/config/arm/errata/798181.h) \
+  arch/arm/include/asm/pgtable-2level.h \
+  include/asm-generic/pgtable.h \
+    $(wildcard include/config/have/arch/transparent/hugepage/pud.h) \
+    $(wildcard include/config/have/arch/soft/dirty.h) \
+    $(wildcard include/config/arch/enable/thp/migration.h) \
     $(wildcard include/config/have/arch/huge/vmap.h) \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/pci.h) \
+    $(wildcard include/config/x86/espfix64.h) \
+  include/linux/huge_mm.h \
+  include/linux/sched/coredump.h \
+    $(wildcard include/config/core/dump/default/elf/headers.h) \
+  include/linux/vmstat.h \
+    $(wildcard include/config/vm/event/counters.h) \
+    $(wildcard include/config/debug/tlbflush.h) \
+    $(wildcard include/config/debug/vm/vmacache.h) \
+  include/linux/vm_event_item.h \
+    $(wildcard include/config/memory/balloon.h) \
+    $(wildcard include/config/balloon/compaction.h) \
   arch/arm/include/asm/io.h \
+    $(wildcard include/config/pci.h) \
     $(wildcard include/config/need/mach/io/h.h) \
     $(wildcard include/config/pcmcia/soc/common.h) \
     $(wildcard include/config/isa.h) \
@@ -787,51 +911,252 @@ deps_/home/debian/driver/button_interrupt/button_irq.o := \
     $(wildcard include/config/xen/dom0.h) \
   include/asm-generic/io.h \
     $(wildcard include/config/generic/iomap.h) \
+    $(wildcard include/config/has/ioport/map.h) \
     $(wildcard include/config/virt/to/bus.h) \
-  arch/arm/include/generated/asm/irq_regs.h \
-  include/asm-generic/irq_regs.h \
-  include/linux/irqdesc.h \
-    $(wildcard include/config/irq/preflow/fasteoi.h) \
-    $(wildcard include/config/generic/irq/debugfs.h) \
-    $(wildcard include/config/handle/domain/irq.h) \
-  arch/arm/include/asm/hw_irq.h \
-  include/linux/irqchip/chained_irq.h \
-  include/linux/irqdomain.h \
-    $(wildcard include/config/irq/domain.h) \
-  include/linux/pinctrl/pinctrl.h \
-    $(wildcard include/config/generic/pinconf.h) \
-  include/linux/pinctrl/pinconf-generic.h \
-    $(wildcard include/config/bias/bus/hold.h) \
-    $(wildcard include/config/bias/disable.h) \
-    $(wildcard include/config/bias/high/impedance.h) \
-    $(wildcard include/config/bias/pull/down.h) \
-    $(wildcard include/config/bias/pull/pin/default.h) \
-    $(wildcard include/config/bias/pull/up.h) \
-    $(wildcard include/config/drive/open/drain.h) \
-    $(wildcard include/config/drive/open/source.h) \
-    $(wildcard include/config/drive/push/pull.h) \
-    $(wildcard include/config/drive/strength.h) \
-    $(wildcard include/config/input/debounce.h) \
-    $(wildcard include/config/input/enable.h) \
-    $(wildcard include/config/input/schmitt.h) \
-    $(wildcard include/config/input/schmitt/enable.h) \
-    $(wildcard include/config/low/power/mode.h) \
-    $(wildcard include/config/output/enable.h) \
-    $(wildcard include/config/output.h) \
-    $(wildcard include/config/power/source.h) \
-    $(wildcard include/config/sleep/hardware/state.h) \
-    $(wildcard include/config/slew/rate.h) \
-    $(wildcard include/config/end.h) \
-    $(wildcard include/config/max.h) \
+  include/linux/mem_encrypt.h \
+    $(wildcard include/config/arch/has/mem/encrypt.h) \
+    $(wildcard include/config/amd/mem/encrypt.h) \
+  arch/arm/include/asm/dma-mapping.h \
+  arch/arm/include/asm/xen/hypervisor.h \
+  include/xen/arm/hypervisor.h \
+  include/linux/netdev_features.h \
+  include/linux/sched/clock.h \
+    $(wildcard include/config/have/unstable/sched/clock.h) \
+    $(wildcard include/config/irq/time/accounting.h) \
+  include/net/flow_dissector.h \
+  include/uapi/linux/if_ether.h \
+  include/linux/splice.h \
+  include/linux/pipe_fs_i.h \
+  include/uapi/linux/if_packet.h \
+  include/net/flow.h \
+  include/net/net_namespace.h \
+    $(wildcard include/config/ieee802154/6lowpan.h) \
+    $(wildcard include/config/ip/sctp.h) \
+    $(wildcard include/config/ip/dccp.h) \
+    $(wildcard include/config/netfilter.h) \
+    $(wildcard include/config/nf/defrag/ipv6.h) \
+    $(wildcard include/config/netfilter/netlink/acct.h) \
+    $(wildcard include/config/nf/ct/netlink/timeout.h) \
+    $(wildcard include/config/wext/core.h) \
+    $(wildcard include/config/mpls.h) \
+    $(wildcard include/config/can.h) \
+    $(wildcard include/config/net/ns.h) \
+  include/net/netns/core.h \
+  include/net/netns/mib.h \
+    $(wildcard include/config/xfrm/statistics.h) \
+  include/net/snmp.h \
+  include/uapi/linux/snmp.h \
+  include/linux/u64_stats_sync.h \
+  include/net/netns/unix.h \
+  include/net/netns/packet.h \
+  include/net/netns/ipv4.h \
+    $(wildcard include/config/ip/multiple/tables.h) \
+    $(wildcard include/config/ip/route/classid.h) \
+    $(wildcard include/config/ip/mroute.h) \
+    $(wildcard include/config/ip/mroute/multiple/tables.h) \
+    $(wildcard include/config/ip/route/multipath.h) \
+  include/net/inet_frag.h \
+  include/net/netns/ipv6.h \
+    $(wildcard include/config/ipv6/multiple/tables.h) \
+    $(wildcard include/config/ipv6/mroute.h) \
+    $(wildcard include/config/ipv6/mroute/multiple/tables.h) \
+  include/net/dst_ops.h \
+  include/net/netns/ieee802154_6lowpan.h \
+  include/net/netns/sctp.h \
+  include/net/netns/dccp.h \
+  include/net/netns/netfilter.h \
+    $(wildcard include/config/nf/defrag/ipv4.h) \
+  include/linux/netfilter_defs.h \
+  include/uapi/linux/netfilter.h \
+  include/linux/in.h \
+  include/uapi/linux/in.h \
+  include/net/netns/x_tables.h \
+    $(wildcard include/config/bridge/nf/ebtables.h) \
+  include/net/netns/conntrack.h \
+    $(wildcard include/config/nf/ct/proto/dccp.h) \
+    $(wildcard include/config/nf/ct/proto/sctp.h) \
+    $(wildcard include/config/nf/conntrack/events.h) \
+    $(wildcard include/config/nf/conntrack/labels.h) \
+  include/linux/netfilter/nf_conntrack_tcp.h \
+  include/uapi/linux/netfilter/nf_conntrack_tcp.h \
+  include/linux/netfilter/nf_conntrack_dccp.h \
+  include/uapi/linux/netfilter/nf_conntrack_tuple_common.h \
+  include/linux/netfilter/nf_conntrack_common.h \
+  include/uapi/linux/netfilter/nf_conntrack_common.h \
+  include/linux/netfilter/nf_conntrack_sctp.h \
+  include/uapi/linux/netfilter/nf_conntrack_sctp.h \
+  include/net/netns/nftables.h \
+  include/net/netns/xfrm.h \
+  include/uapi/linux/xfrm.h \
+  include/net/netns/mpls.h \
+  include/net/netns/can.h \
+  include/linux/ns_common.h \
+  include/linux/seq_file_net.h \
+  include/net/dcbnl.h \
+  include/uapi/linux/dcbnl.h \
+  include/net/netprio_cgroup.h \
+  include/linux/cgroup.h \
+    $(wildcard include/config/sock/cgroup/data.h) \
+    $(wildcard include/config/cgroup/net/classid.h) \
+    $(wildcard include/config/cgroup/data.h) \
+  include/uapi/linux/cgroupstats.h \
+  include/uapi/linux/taskstats.h \
+  include/linux/nsproxy.h \
+  include/linux/user_namespace.h \
+    $(wildcard include/config/inotify/user.h) \
+    $(wildcard include/config/persistent/keyrings.h) \
+  include/linux/cgroup-defs.h \
+  include/linux/bpf-cgroup.h \
+    $(wildcard include/config/cgroup/bpf.h) \
+  include/uapi/linux/bpf.h \
+    $(wildcard include/config/efficient/unaligned/access.h) \
+  include/uapi/linux/bpf_common.h \
+  include/linux/cgroup_subsys.h \
+    $(wildcard include/config/cgroup/cpuacct.h) \
+    $(wildcard include/config/blk/cgroup.h) \
+    $(wildcard include/config/cgroup/device.h) \
+    $(wildcard include/config/cgroup/freezer.h) \
+    $(wildcard include/config/cgroup/perf.h) \
+    $(wildcard include/config/cgroup/hugetlb.h) \
+    $(wildcard include/config/cgroup/pids.h) \
+    $(wildcard include/config/cgroup/rdma.h) \
+    $(wildcard include/config/cgroup/debug.h) \
+  include/linux/hardirq.h \
+  include/linux/ftrace_irq.h \
+    $(wildcard include/config/ftrace/nmi/enter.h) \
+    $(wildcard include/config/hwlat/tracer.h) \
+  include/linux/vtime.h \
+    $(wildcard include/config/virt/cpu/accounting.h) \
+  include/linux/context_tracking_state.h \
+    $(wildcard include/config/context/tracking.h) \
+  arch/arm/include/asm/hardirq.h \
+  arch/arm/include/asm/irq.h \
+    $(wildcard include/config/sparse/irq.h) \
+    $(wildcard include/config/multi/irq/handler.h) \
+  include/linux/irq_cpustat.h \
+  include/uapi/linux/neighbour.h \
+  include/linux/netlink.h \
+  include/net/scm.h \
+    $(wildcard include/config/security/network.h) \
+  include/linux/security.h \
+    $(wildcard include/config/security/infiniband.h) \
+    $(wildcard include/config/security/network/xfrm.h) \
+    $(wildcard include/config/security/path.h) \
+    $(wildcard include/config/audit.h) \
+    $(wildcard include/config/securityfs.h) \
+  include/uapi/linux/netlink.h \
+  include/uapi/linux/netdevice.h \
+  include/uapi/linux/if.h \
+  include/uapi/linux/hdlc/ioctl.h \
+  include/linux/if_link.h \
+  include/uapi/linux/if_link.h \
+    $(wildcard include/config/pending.h) \
+  include/uapi/linux/if_bonding.h \
+  include/uapi/linux/pkt_cls.h \
+    $(wildcard include/config/net/cls/ind.h) \
+  include/uapi/linux/pkt_sched.h \
+  include/linux/hashtable.h \
+  include/linux/interrupt.h \
+    $(wildcard include/config/irq/forced/threading.h) \
+    $(wildcard include/config/generic/irq/probe.h) \
+    $(wildcard include/config/irq/timings.h) \
+  include/linux/irqreturn.h \
+  arch/arm/include/asm/sections.h \
+  include/asm-generic/sections.h \
+  include/linux/io.h \
+  include/linux/inet.h \
+  include/linux/etherdevice.h \
+    $(wildcard include/config/have/efficient/unaligned/access.h) \
+  arch/arm/include/asm/unaligned.h \
+  include/linux/unaligned/le_struct.h \
+  include/linux/unaligned/be_byteshift.h \
+  include/linux/unaligned/generic.h \
+  include/net/sock.h \
+    $(wildcard include/config/inet.h) \
+  include/linux/page_counter.h \
+  include/linux/memcontrol.h \
+    $(wildcard include/config/memcg/swap.h) \
+  include/linux/vmpressure.h \
+  include/linux/eventfd.h \
+    $(wildcard include/config/eventfd.h) \
+  include/linux/writeback.h \
+  include/linux/flex_proportions.h \
+  include/linux/backing-dev-defs.h \
     $(wildcard include/config/debug/fs.h) \
-  include/linux/pinctrl/machine.h \
-  include/linux/gpio/consumer.h \
-    $(wildcard include/config/gpio/sysfs.h) \
-  include/linux/of_irq.h \
-    $(wildcard include/config/ppc32.h) \
-    $(wildcard include/config/ppc/pmac.h) \
-    $(wildcard include/config/of/irq.h) \
+  include/linux/blk_types.h \
+    $(wildcard include/config/blk/dev/throttling/low.h) \
+    $(wildcard include/config/blk/dev/integrity.h) \
+  include/linux/bvec.h \
+  include/linux/bio.h \
+  include/linux/highmem.h \
+    $(wildcard include/config/x86/32.h) \
+    $(wildcard include/config/debug/highmem.h) \
+  arch/arm/include/asm/cacheflush.h \
+    $(wildcard include/config/arm/errata/411920.h) \
+    $(wildcard include/config/cpu/cache/vipt.h) \
+    $(wildcard include/config/outer/cache.h) \
+    $(wildcard include/config/frame/pointer.h) \
+  arch/arm/include/asm/glue-cache.h \
+    $(wildcard include/config/cpu/cache/v4.h) \
+    $(wildcard include/config/cpu/cache/v4wb.h) \
+  arch/arm/include/asm/cachetype.h \
+    $(wildcard include/config/cpu/cache/vivt.h) \
+  arch/arm/include/asm/outercache.h \
+    $(wildcard include/config/outer/cache/sync.h) \
+  arch/arm/include/asm/kmap_types.h \
+  arch/arm/include/asm/highmem.h \
+  include/linux/mempool.h \
+  include/linux/ioprio.h \
+  include/linux/iocontext.h \
+  include/linux/filter.h \
+    $(wildcard include/config/arch/has/set/memory.h) \
+    $(wildcard include/config/bpf/jit.h) \
+    $(wildcard include/config/have/ebpf/jit.h) \
+  include/linux/cryptohash.h \
+  include/linux/set_memory.h \
+  arch/arm/include/asm/set_memory.h \
+  include/net/sch_generic.h \
+  include/uapi/linux/pkt_cls.h \
+  include/net/gen_stats.h \
+  include/uapi/linux/gen_stats.h \
+  include/linux/rtnetlink.h \
+    $(wildcard include/config/net/ingress.h) \
+    $(wildcard include/config/net/egress.h) \
+  include/uapi/linux/rtnetlink.h \
+  include/uapi/linux/if_addr.h \
+  include/net/rtnetlink.h \
+  include/net/netlink.h \
+  include/uapi/linux/filter.h \
+  include/linux/rculist_nulls.h \
+  include/linux/poll.h \
+  include/uapi/linux/poll.h \
+  arch/arm/include/generated/uapi/asm/poll.h \
+  include/uapi/asm-generic/poll.h \
+  include/net/dst.h \
+  include/net/neighbour.h \
+  include/net/tcp_states.h \
+  include/uapi/linux/net_tstamp.h \
+  include/net/smc.h \
+  include/linux/if_arp.h \
+    $(wildcard include/config/firewire/net.h) \
+  include/uapi/linux/if_arp.h \
+  include/linux/ip.h \
+  include/uapi/linux/ip.h \
+  include/linux/tcp.h \
+    $(wildcard include/config/tcp/md5sig.h) \
+  include/linux/win_minmax.h \
+  include/net/inet_connection_sock.h \
+  include/net/inet_sock.h \
+  include/net/request_sock.h \
+  include/net/netns/hash.h \
+  include/net/l3mdev.h \
+  include/net/fib_rules.h \
+  include/uapi/linux/fib_rules.h \
+  include/net/fib_notifier.h \
+  include/net/inet_timewait_sock.h \
+  include/net/timewait_sock.h \
+  include/uapi/linux/tcp.h \
 
-/home/debian/driver/button_interrupt/button_irq.o: $(deps_/home/debian/driver/button_interrupt/button_irq.o)
+/home/debian/driver/basic_loop_back_drv/main.o: $(deps_/home/debian/driver/basic_loop_back_drv/main.o)
 
-$(deps_/home/debian/driver/button_interrupt/button_irq.o):
+$(deps_/home/debian/driver/basic_loop_back_drv/main.o):
