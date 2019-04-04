@@ -1,3 +1,3 @@
-/home/debian/watchdog_summary/button_interrupt/button_irq.ko
-/home/debian/watchdog_summary/button_interrupt/button_irq.o
+/home/debian/driver/button_interrupt/button_irq.ko
+/home/debian/driver/button_interrupt/button_irq.o
 

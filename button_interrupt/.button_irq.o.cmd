@@ -1,8 +1,8 @@
-cmd_/home/debian/watchdog_summary/button_interrupt/button_irq.o := gcc -Wp,-MD,/home/debian/watchdog_summary/button_interrupt/.button_irq.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/6/include -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"button_irq"'  -DKBUILD_MODNAME='"button_irq"' -c -o /home/debian/watchdog_summary/button_interrupt/.tmp_button_irq.o /home/debian/watchdog_summary/button_interrupt/button_irq.c
+cmd_/home/debian/driver/button_interrupt/button_irq.o := gcc -Wp,-MD,/home/debian/driver/button_interrupt/.button_irq.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/6/include -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"button_irq"'  -DKBUILD_MODNAME='"button_irq"' -c -o /home/debian/driver/button_interrupt/.tmp_button_irq.o /home/debian/driver/button_interrupt/button_irq.c
 
-source_/home/debian/watchdog_summary/button_interrupt/button_irq.o := /home/debian/watchdog_summary/button_interrupt/button_irq.c
+source_/home/debian/driver/button_interrupt/button_irq.o := /home/debian/driver/button_interrupt/button_irq.c
 
-deps_/home/debian/watchdog_summary/button_interrupt/button_irq.o := \
+deps_/home/debian/driver/button_interrupt/button_irq.o := \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
     $(wildcard include/config/enable/must/check.h) \
@@ -827,7 +827,11 @@ deps_/home/debian/watchdog_summary/button_interrupt/button_irq.o := \
   include/linux/pinctrl/machine.h \
   include/linux/gpio/consumer.h \
     $(wildcard include/config/gpio/sysfs.h) \
+  include/linux/of_irq.h \
+    $(wildcard include/config/ppc32.h) \
+    $(wildcard include/config/ppc/pmac.h) \
+    $(wildcard include/config/of/irq.h) \
 
-/home/debian/watchdog_summary/button_interrupt/button_irq.o: $(deps_/home/debian/watchdog_summary/button_interrupt/button_irq.o)
+/home/debian/driver/button_interrupt/button_irq.o: $(deps_/home/debian/driver/button_interrupt/button_irq.o)
 
-$(deps_/home/debian/watchdog_summary/button_interrupt/button_irq.o):
+$(deps_/home/debian/driver/button_interrupt/button_irq.o):

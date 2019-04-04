@@ -5,10 +5,11 @@
 #include <linux/interrupt.h>
 #include <linux/gpio.h>
 #include <linux/io.h>
+#include <linux/of.h>
+#include <linux/of_irq.h>
 
 #define DRIVER_AUTHOR "vu hai long"
 #define DRIVER_DSC "button using nterrupt"
-
 
 //P8.7 = GPIO2.2
 //P8.8 = GPIO2.3
@@ -137,13 +138,25 @@ static irqreturn_t my_handler(int irq , void *dev_id)
 }
 static int __init hello_init(void)
 {
+		
+	struct device_node *temp;	
 	pr_info("Kernel init\n");
 
 	gpio_setup();
+
+	temp = of_find_node_by_phandle(0x9a);
+	if( !temp ) { 
+		pr_err("cant' find node with handler\n");
+		return -1;
+	}
+	irqb = irq_of_parse_and_map(temp,0);
+	pr_info("virtual irq %d\n", irqb);
 	//register handler
-	irqb = gpio_to_irq(66);
+	
+	//irqb = gpio_to_irq(66);
+	irqb = 28;
 	if (request_irq(irqb, my_handler , IRQF_TRIGGER_RISING, "longvh", NULL)){
-		pr_err("requeset irq fail . can't register interrup %d\n",IRQ_NUMBER);
+		pr_err("requeset irq fail . can't register interrup %d\n",irqb);
 		return -1;
 	}
 	interrupt_enable();
