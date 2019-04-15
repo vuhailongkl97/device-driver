@@ -153,8 +153,8 @@ static int __init hello_init(void)
 	pr_info("virtual irq %d\n", irqb);
 	//register handler
 	
-	//irqb = gpio_to_irq(66);
-	irqb = 28;
+	irqb = gpio_to_irq(44);
+	//irqb = 28;
 	if (request_irq(irqb, my_handler , IRQF_TRIGGER_RISING, "longvh", NULL)){
 		pr_err("requeset irq fail . can't register interrup %d\n",irqb);
 		return -1;

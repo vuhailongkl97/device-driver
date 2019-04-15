@@ -25,6 +25,8 @@ __attribute__((section("__versions"))) = {
 	{ 0x977e40b4, __VMLINUX_SYMBOL_STR(module_layout) },
 	{ 0xc1514a3b, __VMLINUX_SYMBOL_STR(free_irq) },
 	{ 0xd6b8e852, __VMLINUX_SYMBOL_STR(request_threaded_irq) },
+	{ 0xa90e6db8, __VMLINUX_SYMBOL_STR(gpiod_to_irq) },
+	{ 0x97b603c8, __VMLINUX_SYMBOL_STR(gpio_to_desc) },
 	{ 0x602fbc24, __VMLINUX_SYMBOL_STR(irq_of_parse_and_map) },
 	{ 0x5e623443, __VMLINUX_SYMBOL_STR(of_find_node_by_phandle) },
 	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
