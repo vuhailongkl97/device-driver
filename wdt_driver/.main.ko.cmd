@@ -1,1 +1,0 @@
-cmd_/home/debian/watchdog_summary/wdt_driver/main.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/watchdog_summary/wdt_driver/main.ko /home/debian/watchdog_summary/wdt_driver/main.o /home/debian/watchdog_summary/wdt_driver/main.mod.o ;  true

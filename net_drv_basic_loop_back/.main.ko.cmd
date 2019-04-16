@@ -1,1 +1,0 @@
-cmd_/home/debian/driver/basic_loop_back_drv/main.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/driver/basic_loop_back_drv/main.ko /home/debian/driver/basic_loop_back_drv/main.o /home/debian/driver/basic_loop_back_drv/main.mod.o ;  true

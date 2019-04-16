@@ -1,1 +1,0 @@
-cmd_/home/debian/driver/button_interrupt/button_irq.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/driver/button_interrupt/button_irq.ko /home/debian/driver/button_interrupt/button_irq.o /home/debian/driver/button_interrupt/button_irq.mod.o ;  true
