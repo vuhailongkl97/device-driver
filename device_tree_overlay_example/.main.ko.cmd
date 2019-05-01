@@ -1,1 +1,0 @@
-cmd_/home/debian/device-driver/device_tree_overlay_example/main.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/device-driver/device_tree_overlay_example/main.ko /home/debian/device-driver/device_tree_overlay_example/main.o /home/debian/device-driver/device_tree_overlay_example/main.mod.o ;  true
