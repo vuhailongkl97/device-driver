@@ -5,51 +5,60 @@
 #include <linux/of.h>
 #include <linux/io.h>
 
+struct my_device {
+	int secret_number ;
+	struct device *mdev;
+	struct file_operations fops;
+	struct mutex lock;
+};
 static int my_probe(struct platform_device *pdev) {
-	struct resource  *res;
-	void __iomem *base;
-	pr_info("jump to probe\n");
-	
-	res =  platform_get_resource(pdev, IORESOURCE_MEM ,0);
-	base = devm_ioremap_resource(&pdev->dev, res); 
-	if (IS_ERR(base)) 
-    		return PTR_ERR(base); 
+	//	struct resource  *res;
+	//	void __iomem *base;
+	struct my_device *mdevice;	
+	struct device *dev = &pdev->dev;
 
-	int irq = platform_get_irq(pdev, 0); 
-	pr_alert("base address of spi is : %ld\n", res->start);
-	pr_alert("irq of spi is : %ld\n", irq);
+	pr_info("jump to probe\n");
+	mdevice = kzalloc(sizeof(struct my_device), GFP_KERNEL);
+	
+	if( mdevice == NULL) {
+		dev_info(dev, "fail to alloc mdevice\n");
+		return -ENOMEM;
+	}
+	dev_info(dev, "alloc ok");
+	mdevice->mdev = dev;
+	mdevice->secret_number = 1997;
+	mutex_init(&mdevice->lock);
+	platform_set_drvdata(pdev, mdevice);
+	
 	return 0;
 
 }
+static int my_remove(struct platform_device *pdev) {
+	struct my_device *my_dev ;
+	//my_dev = container_of(pdev->dev, struct my_device , mdev);
+	my_dev = platform_get_drvdata(pdev);
+	pr_info("secret number get from containter of is : %d\n", my_dev->secret_number);
+	
+	kfree(my_dev);
+	return 0;
+}
 static const struct of_device_id test_id[] = {
-	{ .compatible ="hehe,longvh12",  },
+	{ .compatible ="hehe,longvh",  },
 	{},
 };
 MODULE_DEVICE_TABLE(of, test_id);
 
 static struct platform_driver test_driver = {
 	.probe = my_probe,	
+	.remove = my_remove,
 	.driver = {
 		.name = "test driver",
 		.of_match_table = test_id,
 	},
 };
 
-static int __init my_init(void) {
-	struct device_node *temp;
-	pr_info("module init\n");
+module_platform_driver(test_driver);
 
-	return platform_driver_register(&test_driver);
-}
-
-static void __exit my_exit(void) {
-	pr_info("module exit\n");
-	platform_driver_unregister(&test_driver);
-	
-}
-
-module_init(my_init);
-module_exit(my_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Longvh");

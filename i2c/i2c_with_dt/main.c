@@ -13,19 +13,37 @@
 static dev_t first;
 static struct cdev *c_dev;
 static struct class *cl;
-static struct i2c_client *client;
 
+struct mpu_state_st {
+	struct i2c_client *client;
+	struct device *dev;
+	struct mutex lock;
+};
+struct mpu_state_st *mpu_dev ;
 
 static int mpu_i2c_probe(struct i2c_client *i2c_dev, const struct i2c_device_id *i2c_dev_id) {
 	int ret = 0;
 	struct mpu_xyz mpu;
+	struct device *dev = &i2c_dev->dev;
 	pr_info("jump to probe\n");
 
-	client = i2c_dev;
+	mpu_dev = kzalloc(sizeof(struct mpu_state_st), GFP_KERNEL);
+	
+	if (mpu_dev == NULL) { 
+		dev_err(dev,"fail to create mpu_dev\n"); 
+		return -ENOMEM;
+	}
+	mpu_dev->client = i2c_dev;
+	mpu_dev->dev = &i2c_dev->dev;
+	mutex_init(&mpu_dev->lock);
+	
+	i2c_set_clientdata(i2c_dev, mpu_dev);
 	
 	pr_info("address of device : %d\n", i2c_dev->addr);
 	pr_info("adapter bus       : %s\n", i2c_dev->adapter->name);
 	pr_info("get address of client %d\n", mpu_read_value(i2c_dev, 0x75));
+	
+	dev_info(dev, "client created\n");
 	
 	ret = mpu_init(i2c_dev, MPU6050_SCALE_2000DPS, MPU6050_RANGE_2G) ;
 	if (ret < 0) {
@@ -39,11 +57,15 @@ static int mpu_i2c_probe(struct i2c_client *i2c_dev, const struct i2c_device_id 
 		return -1;
 	}
 	pr_info("get mpu x :%d\ny : %d\nz : %d\n",mpu.x_asis, mpu.y_asis, mpu.z_asis);
+	
 
 	return 0;
 } 
 static int mpu_i2c_remove(struct i2c_client *i2c_dev) {
+	struct mpu_state_st *mpu_dev = i2c_get_clientdata(i2c_dev);
+
 	pr_info("remove driver\n");
+	kfree(mpu_dev);
 	return 0;
 }
 static const struct of_device_id test_id[] = {
@@ -70,7 +92,7 @@ static ssize_t my_read(struct file  *f , char __user *buf ,size_t len ,  loff_t 
 	int ret = 0;
 	struct mpu_xyz mpu;
 
-	ret =  read_raw_accel(client, &mpu);
+	ret =  read_raw_accel(mpu_dev->client, &mpu);
 	if (ret < 0) {
 		pr_info("error read raw_accel\n");
 	}

@@ -1,0 +1,1 @@
+cmd_/home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.ko /home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.o /home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.mod.o ;  true
