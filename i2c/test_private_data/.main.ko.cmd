@@ -1,1 +1,0 @@
-cmd_/home/debian/device-driver/i2c/test_private_data/main.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/device-driver/i2c/test_private_data/main.ko /home/debian/device-driver/i2c/test_private_data/main.o /home/debian/device-driver/i2c/test_private_data/main.mod.o ;  true

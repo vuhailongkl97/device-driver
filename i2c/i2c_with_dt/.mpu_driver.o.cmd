@@ -1,1 +1,0 @@
-cmd_/home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.o := ld -EL    -r -o /home/debian/device-driver/i2c/i2c_with_dt/mpu_driver.o /home/debian/device-driver/i2c/i2c_with_dt/main.o /home/debian/device-driver/i2c/i2c_with_dt/mpu6050.o 
