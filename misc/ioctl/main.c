@@ -2,6 +2,8 @@
 #include <linux/kernel.h>
 #include <linux/miscdevice.h>
 #include <linux/ioctl.h>
+#include <linux/uaccess.h>
+#include "my_misc_ioctl.h"
 
 static int my_misc_open(struct inode *ino, struct file *fp) {
 
@@ -27,18 +29,20 @@ static ssize_t my_misc_read(struct file *fp, char *buf, size_t len, loff_t *pos)
 }
 
 static long my_misc_ioctl(struct file *fp, unsigned int cmd, unsigned long args) {
+	int baubrate;
+
 	pr_info("my misc ioctl\n");
-
-
 	switch(cmd) {
 		case SET_BAUBRATE:
-			pr_info("setup baudrate\n");
+			copy_from_user(&baubrate , (void *)args, sizeof(baubrate) );
+			pr_info("setup baudrate : %d \n", baubrate);
 			break;
 		case GET_INFO_DEV:
-			pr_info("get information device\n");
+			copy_to_user((void __user *)args, &baubrate, sizeof(baubrate));
+			pr_info("get information device : %d \n", baubrate);
 			break;
 		default:
-			pr_error("incorrect command via ioctl method\n");
+			pr_err("incorrect command via ioctl method\n");
 			return -ENOTTY;
 	}
 
