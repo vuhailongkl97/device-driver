@@ -31,6 +31,7 @@ static unsigned int my_poll(struct file *file, poll_table *wait)
 	    reval_mask |= (POLLOUT | POLLWRNORM); 
 	//wake_up_interruptible(&my_rq); 
 	//wake_up_interruptible(&my_wq); 
+	pr_info("test to run this command\n");
      return reval_mask; 
 } 
 
