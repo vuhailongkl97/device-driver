@@ -11,9 +11,9 @@
 	clk_mcasp0_fixed {
 		compatible = "fixed-clock";
 		#clock-cells = <0x0>;
-		phandle = <0x2c7>;
+		phandle = <0x2c6>;
 		clock-frequency = <0x1770000>;
-		linux,phandle = <0x2c7>;
+		linux,phandle = <0x2c6>;
 	};
 
 	bone_capemgr {
@@ -199,7 +199,6 @@
 		P8_29_default_pin = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_P8_29_default_pin";
 		dpll_core_m5_ck = "/ocp/l4_wkup@44c00000/prcm@200000/clocks/dpll_core_m5_ck@484";
 		P9_42_gpio_pu_pin = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_P9_42_gpio_pu_pin";
-		spi0_pins_s0 = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/spi0_pins_s0", "";
 		P8_33_default_pin = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_P8_33_default_pin";
 		P9_30_gpio_input_pin = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_P9_30_gpio_input_pin";
 		P9_12_default_pin = "/ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_P9_12_default_pin";
@@ -1054,7 +1053,7 @@
 			dma-names = "tx", "rx";
 			phandle = <0x28b>;
 			reg = <0x481d8000 0x1000>;
-			pinctrl-0 = <0x2c6>;
+			pinctrl-0 = <0x2c5>;
 			dmas = <0x2d 0x2 0x0 0x2d 0x3 0x0>;
 			vmmc-supply = <0x36>;
 			pinctrl-names = "default";
@@ -2315,7 +2314,7 @@
 			dma-names = "tx0", "rx0", "tx1", "rx1";
 			phandle = <0x299>;
 			reg = <0x48030000 0x400>;
-			pinctrl-0 = <0x2c5>;
+			pinctrl-0;
 			dmas = <0x2d 0x10 0x0 0x2d 0x11 0x0 0x2d 0x12 0x0 0x2d 0x13 0x0>;
 			ti,spi-num-cs = <0x2>;
 			pinctrl-names = "default";
@@ -2335,13 +2334,6 @@
 				#size-cells = <0x0>;
 				reg = <0x1>;
 				spi-max-frequency = <0xf42400>;
-			};
-
-			spidev@0 {
-				compatible = "longvh12";
-				status = "okay";
-				reg = <0x0>;
-				spi-max-frequency = <0x16e3600>;
 			};
 		};
 
@@ -2517,7 +2509,7 @@
 			phandle = <0x2bf>;
 			rx-num-evt = <0x20>;
 			reg = <0x48038000 0x2000 0x46000000 0x400000>;
-			pinctrl-0 = <0x2cf>;
+			pinctrl-0 = <0x2ce>;
 			dmas = <0x2d 0x8 0x2 0x2d 0x9 0x2>;
 			interrupt-names = "tx", "rx";
 			pinctrl-names = "default";
@@ -2545,9 +2537,9 @@
 			port {
 
 				endpoint@0 {
-					remote-endpoint = <0x2cb>;
-					phandle = <0x2ce>;
-					linux,phandle = <0x2ce>;
+					remote-endpoint = <0x2ca>;
+					phandle = <0x2cd>;
+					linux,phandle = <0x2cd>;
 				};
 			};
 		};
@@ -3129,9 +3121,9 @@
 			status = "okay";
 			#address-cells = <0x1>;
 			#size-cells = <0x1>;
-			phandle = <0x2d1>;
+			phandle = <0x2d0>;
 			reg = <0x4a326004 0x4>;
-			linux,phandle = <0x2d1>;
+			linux,phandle = <0x2d0>;
 
 			pruss@0 {
 				compatible = "ti,am3356-pruss";
@@ -3140,9 +3132,9 @@
 				#address-cells = <0x1>;
 				interrupts = <0x14 0x15 0x16 0x17 0x18 0x19 0x1a 0x1b>;
 				#size-cells = <0x1>;
-				phandle = <0x2d2>;
+				phandle = <0x2d1>;
 				reg = <0x0 0x80000>;
-				linux,phandle = <0x2d2>;
+				linux,phandle = <0x2d1>;
 				interrupt-names = "host2", "host3", "host4", "host5", "host6", "host7", "host8", "host9";
 
 				mdio@32400 {
@@ -3152,72 +3144,72 @@
 					status = "disabled";
 					#address-cells = <0x1>;
 					#size-cells = <0x0>;
-					phandle = <0x2d9>;
+					phandle = <0x2d8>;
 					reg = <0x32400 0x90>;
 					bus_freq = <0xf4240>;
-					linux,phandle = <0x2d9>;
+					linux,phandle = <0x2d8>;
 				};
 
 				intc@20000 {
 					compatible = "ti,am3356-pruss-intc";
 					reg-names = "intc";
 					#interrupt-cells = <0x1>;
-					phandle = <0x2d0>;
+					phandle = <0x2cf>;
 					reg = <0x20000 0x2000>;
-					linux,phandle = <0x2d0>;
+					linux,phandle = <0x2cf>;
 					interrupt-controller;
 				};
 
 				cfg@26000 {
 					compatible = "syscon";
-					phandle = <0x2d4>;
+					phandle = <0x2d3>;
 					reg = <0x26000 0x2000>;
-					linux,phandle = <0x2d4>;
+					linux,phandle = <0x2d3>;
 				};
 
 				pru@38000 {
 					compatible = "ti,am3356-pru";
 					reg-names = "iram", "control", "debug";
-					interrupt-parent = <0x2d0>;
+					interrupt-parent = <0x2cf>;
 					interrupts = <0x12 0x13>;
-					phandle = <0x2d8>;
+					phandle = <0x2d7>;
 					reg = <0x38000 0x2000 0x24000 0x400 0x24400 0x100>;
-					linux,phandle = <0x2d8>;
+					linux,phandle = <0x2d7>;
 					interrupt-names = "vring", "kick";
 					firmware-name = "am335x-pru1-fw";
 				};
 
 				iep@2e000 {
 					compatible = "syscon";
-					phandle = <0x2d5>;
+					phandle = <0x2d4>;
 					reg = <0x2e000 0x31c>;
-					linux,phandle = <0x2d5>;
+					linux,phandle = <0x2d4>;
 				};
 
 				mii_rt@32000 {
 					compatible = "syscon";
-					phandle = <0x2d6>;
+					phandle = <0x2d5>;
 					reg = <0x32000 0x58>;
-					linux,phandle = <0x2d6>;
+					linux,phandle = <0x2d5>;
 				};
 
 				pru@34000 {
 					compatible = "ti,am3356-pru";
 					reg-names = "iram", "control", "debug";
-					interrupt-parent = <0x2d0>;
+					interrupt-parent = <0x2cf>;
 					interrupts = <0x10 0x11>;
-					phandle = <0x2d7>;
+					phandle = <0x2d6>;
 					reg = <0x34000 0x2000 0x22000 0x400 0x22400 0x100>;
-					linux,phandle = <0x2d7>;
+					linux,phandle = <0x2d6>;
 					interrupt-names = "vring", "kick";
 					firmware-name = "am335x-pru0-fw";
 				};
 
 				memories@0 {
 					reg-names = "dram0", "dram1", "shrdram2";
-					phandle = <0x2d3>;
+					phandle = <0x2d2>;
 					reg = <0x0 0x2000 0x2000 0x2000 0x10000 0x3000>;
-					linux,phandle = <0x2d3>;
+					linux,phandle = <0x2d2>;
 				};
 			};
 		};
@@ -3420,8 +3412,8 @@
 
 					nxp_hdmi_bonelt_pins {
 						pinctrl-single,pins = <0x1b0 0x3 0xa0 0x8 0xa4 0x8 0xa8 0x8 0xac 0x8 0xb0 0x8 0xb4 0x8 0xb8 0x8 0xbc 0x8 0xc0 0x8 0xc4 0x8 0xc8 0x8 0xcc 0x8 0xd0 0x8 0xd4 0x8 0xd8 0x8 0xdc 0x8 0xe0 0x0 0xe4 0x0 0xe8 0x0 0xec 0x0>;
-						phandle = <0x2cc>;
-						linux,phandle = <0x2cc>;
+						phandle = <0x2cb>;
+						linux,phandle = <0x2cb>;
 					};
 
 					pinmux_P8_29_pruout_pin {
@@ -3512,12 +3504,6 @@
 					pinmux_P8_19_gpio_input_pin {
 						pinctrl-single,pins = <0x20 0x2f>;
 						phandle = <0xc5>;
-					};
-
-					spi0_pins_s0 {
-						pinctrl-single,pins = <0x150 0x30 0x154 0x30 0x158 0x10 0x15c 0x10>;
-						phandle = <0x2c5>;
-						linux,phandle = <0x2c5>;
 					};
 
 					pinmux_P9_24_gpio_pin {
@@ -4362,8 +4348,8 @@
 
 					mcasp0_pins {
 						pinctrl-single,pins = <0x1ac 0x30 0x19c 0x2 0x194 0x10 0x190 0x0 0x6c 0x7>;
-						phandle = <0x2cf>;
-						linux,phandle = <0x2cf>;
+						phandle = <0x2ce>;
+						linux,phandle = <0x2ce>;
 					};
 
 					pinmux_P8_42_pruin_pin {
@@ -5708,8 +5694,8 @@
 
 					pinmux_emmc_pins {
 						pinctrl-single,pins = <0x80 0x32 0x84 0x32 0x0 0x31 0x4 0x31 0x8 0x31 0xc 0x31 0x10 0x31 0x14 0x31 0x18 0x31 0x1c 0x31>;
-						phandle = <0x2c6>;
-						linux,phandle = <0x2c6>;
+						phandle = <0x2c5>;
+						linux,phandle = <0x2c5>;
 					};
 
 					pinmux_P8_20_gpio_pu_pin {
@@ -5794,8 +5780,8 @@
 
 					nxp_hdmi_bonelt_off_pins {
 						pinctrl-single,pins = <0x1b0 0x3>;
-						phandle = <0x2cd>;
-						linux,phandle = <0x2cd>;
+						phandle = <0x2cc>;
+						linux,phandle = <0x2cc>;
 					};
 
 					pinmux_P9_22_gpio_input_pin {
@@ -6827,12 +6813,12 @@
 			tda19988@70 {
 				compatible = "nxp,tda998x";
 				#sound-dai-cells = <0x0>;
-				pinctrl-1 = <0x2cd>;
+				pinctrl-1 = <0x2cc>;
 				audio-ports = <0x2 0x3>;
-				phandle = <0x2ca>;
+				phandle = <0x2c9>;
 				reg = <0x70>;
-				pinctrl-0 = <0x2cc>;
-				linux,phandle = <0x2ca>;
+				pinctrl-0 = <0x2cb>;
+				linux,phandle = <0x2c9>;
 				pinctrl-names = "default", "off";
 
 				ports {
@@ -6840,9 +6826,9 @@
 					port@0 {
 
 						endpoint@0 {
-							remote-endpoint = <0x2ce>;
-							phandle = <0x2cb>;
-							linux,phandle = <0x2cb>;
+							remote-endpoint = <0x2cd>;
+							phandle = <0x2ca>;
+							linux,phandle = <0x2ca>;
 						};
 					};
 				};
@@ -6922,19 +6908,19 @@
 	sound {
 		simple-audio-card,name = "TI BeagleBone Black";
 		compatible = "simple-audio-card";
-		simple-audio-card,frame-master = <0x2c8>;
-		simple-audio-card,bitclock-master = <0x2c8>;
+		simple-audio-card,frame-master = <0x2c7>;
+		simple-audio-card,bitclock-master = <0x2c7>;
 		simple-audio-card,format = "i2s";
 
 		simple-audio-card,cpu {
-			clocks = <0x2c9>;
-			phandle = <0x2c8>;
-			linux,phandle = <0x2c8>;
+			clocks = <0x2c8>;
+			phandle = <0x2c7>;
+			linux,phandle = <0x2c7>;
 			sound-dai = <0x2bf>;
 		};
 
 		simple-audio-card,codec {
-			sound-dai = <0x2ca>;
+			sound-dai = <0x2c9>;
 		};
 	};
 
@@ -6983,10 +6969,10 @@
 
 	clk_mcasp0 {
 		compatible = "gpio-gate-clock";
-		clocks = <0x2c7>;
+		clocks = <0x2c6>;
 		#clock-cells = <0x0>;
-		phandle = <0x2c9>;
-		linux,phandle = <0x2c9>;
+		phandle = <0x2c8>;
+		linux,phandle = <0x2c8>;
 		enable-gpios = <0x5e 0x1b 0x0>;
 	};
 };

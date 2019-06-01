@@ -2329,19 +2329,19 @@
 				spi-max-frequency = <0xf42400>;
 			};
 
+			longvh@0 {
+				compatible = "testlongvh12";
+				status = "okay";
+				reg = <0x0>;
+				spi-max-frequency = <0x16e3600>;
+			};
+
 			channel@1 {
 				compatible = "spidev";
 				#address-cells = <0x1>;
 				#size-cells = <0x0>;
 				reg = <0x1>;
 				spi-max-frequency = <0xf42400>;
-			};
-
-			spidev@0 {
-				compatible = "longvh12";
-				status = "okay";
-				reg = <0x0>;
-				spi-max-frequency = <0x16e3600>;
 			};
 		};
 
@@ -6909,7 +6909,7 @@
 
 	chosen {
 		stdout-path = "/ocp/serial@44e09000";
-		bootargs = "console=ttyO0,115200n8 bone_capemgr.uboot_capemgr_enabled=1 root=/dev/mmcblk1p1 ro rootfstype=ext4 rootwait coherent_pool=1M net.ifnames=0 quiet";
+		bootargs = "console=ttyO0,115200n8 quiet drm.debug=7 capemgr.enable_partno=BB-SPI0-01 bone_capemgr.uboot_capemgr_enabled=1 root=/dev/mmcblk1p1 ro rootfstype=ext4 rootwait coherent_pool=1M net.ifnames=0 quiet";
 		linux,initrd-start = <0x8fb88000>;
 		linux,initrd-end = <0x8ffffe7c>;
 	};
