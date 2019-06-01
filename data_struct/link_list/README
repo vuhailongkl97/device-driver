@@ -1,0 +1,9 @@
+description:
+	test list struct in linux : create , del, free
+
+how to run ?
+	1. make 
+
+	2. sudo insmod main3.ko
+
+	3. tail -22 /var/log/kern.log to check  
