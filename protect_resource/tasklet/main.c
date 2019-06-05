@@ -10,7 +10,7 @@ struct mutex my_mutex;
 void tasklet_function(unsigned long data) 
 { 
 	mutex_lock(&my_mutex);
-	 printk("%s\n", (char *)data); 
+	printk("%s\n", (char *)data); 
 	mutex_unlock(&my_mutex);
 } 
 	   
