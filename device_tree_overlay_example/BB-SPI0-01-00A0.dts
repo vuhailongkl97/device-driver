@@ -7,35 +7,43 @@
     part-number = "spi0pinmux";
 
     fragment@0 {
-        target = <&am33xx_pinmux>;
+	// spi_sclk 
+        target = <&P9_22_default_pin>;
         __overlay__ {
-            spi0_pins_s0: spi0_pins_s0 {
-                pinctrl-single,pins = <
-                  0x150 0x30  /* spi0_sclk, INPUT_PULLUP | MODE0 */
-                  0x154 0x30  /* spi0_d0, INPUT_PULLUP | MODE0 */
-                  0x158 0x10  /* spi0_d1, OUTPUT_PULLUP | MODE0 */
-                  0x15c 0x10  /* spi0_cs0, OUTPUT_PULLUP | MODE0 */
-                >;
+		pinctrl-single,pins = <0x150 0x10>;
             };
-        };
     };
-
     fragment@1 {
-	target-path= "/ocp/spi@48030000";
+	// spi_miso 
+        target = <&P9_21_default_pin>;
         __overlay__ {
-             #address-cells = <1>;
-             #size-cells = <0>;
-             status = "okay";
-             pinctrl-names = "default";
-             pinctrl-0 = <&spi0_pins_s0>;
-
-             channel@0 {
-                 spi-max-frequency = <24000000>;
-                 reg = <0>;
-                 status = "okay";
-                 compatible = "testlongvh12";
+		pinctrl-single,pins = <0x154 0x30>;
             };
-        };
     };
+    fragment@3 {
+	// spi_cs0_
+        target = <&P9_17_default_pin>;
+        __overlay__ {
+		pinctrl-single,pins = <0x158 0x10>;
+            };
+    };
+    fragment@4 {
+	// spi_D0 mosi
+        target = <&P9_18_default_pin>;
+        __overlay__ {
+		pinctrl-single,pins = <0x15c 0x10>;
+            };
+    };
+    fragment@5 {
+	target = <&spi0>;
+	__overlay__ {
+		status = "okay";
+		channel@0 {
+			//compatible = "hehe,longvh";
+			spi-max-frequency = <24000000>;
+		};
+	};
+    };
+
 };
 
