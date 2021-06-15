@@ -3,7 +3,7 @@ sudo su
 PC_IFACE=wlp2s0
 BBB_IFACE=enx3403dea30136
 
-ifconfig $BBB_IFACE 192.168.6.1
+ifconfig $BBB_IFACE 192.168.7.1
 iptables --table nat --append POSTROUTING --out-interface $PC_IFACE -j MASQUERADE
 iptables --append FORWARD --in-interface $BBB_IFACE  -j ACCEPT
 
