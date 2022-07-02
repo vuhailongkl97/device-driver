@@ -7,12 +7,13 @@
     part-number = "spi0pinmux";
 
     fragment@0 {
-	// spi_sclk 
+        // spi_sclk 
         target = <&P9_22_default_pin>;
         __overlay__ {
-		pinctrl-single,pins = <0x150 0x10>;
+        	pinctrl-single,pins = <0x150 0x30>;
             };
     };
+
     fragment@1 {
 	// spi_miso 
         target = <&P9_21_default_pin>;
@@ -38,8 +39,8 @@
 	target = <&spi0>;
 	__overlay__ {
 		status = "okay";
-		channel@0 {
-			//compatible = "hehe,longvh";
+		channel@9 {
+			compatible = "hehe,longvh";
 			spi-max-frequency = <24000000>;
 		};
 	};
